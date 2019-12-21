@@ -51,7 +51,7 @@ foldersRouter
         logger.info(`folder with id ${folder.id} created.`)
         res
           .status(201)
-          .location(path.posix.join(req.originalUrl, `${folder.id}`))
+          .location(path.posix.join(req.originalUrl, `/${folder.id}`))
           .json(serializefolder(folder))
       })
       .catch(next)

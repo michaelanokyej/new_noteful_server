@@ -52,7 +52,7 @@ notesRouter
         logger.info(`note with id ${note.id} created.`)
         res
           .status(201)
-          .location(path.posix.join(req.originalUrl, `${note.id}`))
+          .location(path.posix.join(req.originalUrl, `/${note.id}`))
           .json(serializenote(note))
       })
       .catch(next)
